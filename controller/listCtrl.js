@@ -42,7 +42,16 @@ defaultListApp.controller('defaultListCtrl', ['$scope', '$http', function ($scop
     };
 
     $scope.deleteComment = function(comment){
-        $scope.getComments($scope.selectedProduct.id);
+        var productId = $scope.selectedProduct.id;
+        $http({
+            method: 'DELETE',
+            url: 'https://api.yaas.io/nemanja/product-comments/v1/' + tenant + '/products/' + productId + '/comments/' + comment.id,
+            headers: {
+                'Authorization': 'Bearer ' + Builder.accessToken
+            }
+        }).then(function () {
+            $scope.getComments(productId);
+        });
     };
 
     $scope.getProducts();
