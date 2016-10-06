@@ -2,10 +2,9 @@
     "widgets": [
         {
             "id": "yaas-builder-comments",
-            "title": "yaas-builder-comments",
+            "title": "Product Comments",
             "settings": {
-                "viewUrl": "index.html",
-                "example_setting": "some value"
+                "viewUrl": "index.html"
             }
         }
     ]

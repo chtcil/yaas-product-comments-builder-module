@@ -4,5 +4,5 @@ applications:
   host: yaas-builder-comments
   buildpack: staticfile_buildpack
   instances: 1
-  memory: 256M
-  domain: us-east.modules.yaas.io
+  memory: 64M
+  domain: cfapps.us10.hana.ondemand.com
